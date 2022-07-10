@@ -1,0 +1,22 @@
+# ワークフローの名前
+name: Confirm order of steps
+# トリガーのイベント
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  # ジョブのID
+  order_of_steps:
+    # ジョブが実行されるマシンの種類
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: echo 1
+        run: echo 1
+      - name: echo 2
+        run: echo 2
+      - name: echo 3
+        run: echo 3
+      - name: echo 4
+        run: echo 4
