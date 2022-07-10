@@ -35,7 +35,7 @@ jobs:
       # pytest -> JUnit xml形式で結果を出力
       - name: PyTest
         run: |
-          python -m pytest test --junit-xml results/pytest.xml
+          python -m pytest test_src --junit-xml results/pytest.xml
         # continue-on-error に true を指定することで、
         # 終了ステータスがエラーでもワークフローの実行が中断されなくなる
         continue-on-error: true
@@ -63,4 +63,3 @@ jobs:
         run: |
           pwd
           ls
-          
